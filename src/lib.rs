@@ -147,8 +147,5 @@ mod tests {
                 vec![0.0, 0.0, 2.0, 12.0],
             ]
         );
-
-        let result = 2 + 2;
-        assert_eq!(result, 4);
     }
 }
