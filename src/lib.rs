@@ -74,6 +74,9 @@ pub fn gauss_jordan_elimination(matrix: &mut Vec<Vec<f32>>) {
     }
 }
 
+
+#[cfg(feature = "generic_calculation")] 
+pub fn gauss_jordan_elimination_generic<T>(matrix: &mut Vec<Vec<T>>)
 where T: num::traits::One + num::traits::Zero + std::ops::AddAssign + std::ops::SubAssign 
 + std::ops::Mul<Output = T> + std::ops::MulAssign + std::ops::Div<Output = T> + Clone + Copy 
 + for<'a> std::ops::Add<&'a T> + for<'a> std::ops::Mul<&'a T, Output =  T>,
